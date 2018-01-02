@@ -1,0 +1,16 @@
+<br>
+{% for post in site.posts limit:10 %}
+<div class="row featurette">
+    <a href="/{{ post.date | date: "%Y-%m-%d" }}/{{ post.name }}.html">
+        <div class="col-md-12">
+            <h2 class="">{{ post.title }}  <br></h2>
+            <p class="post-date">{{ post.date | date: '%B %d, %Y' }}</p>
+        </div>
+        <!-- div class="col-md-2">
+            <img src="/assets/img/qrwx.jpg" width="50" height="50">
+            <img class="featurette-image img-responsive list-img center-block img-circle5 img-thumbnail" data-src="holder.js/500x500/auto" src="/assets/img/{{ post.img }}" data-holder-rendered="true">
+        </div -->
+    </a>
+</div>
+<hr class="featurette-divider">
+{% endfor %}
